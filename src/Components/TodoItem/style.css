@@ -1,0 +1,13 @@
+
+.todoItem-li{
+    display: flex;
+    width: 260px;
+    height: 68px;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px #82b3fd solid;
+    border-radius: 16px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}

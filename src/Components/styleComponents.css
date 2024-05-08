@@ -1,0 +1,14 @@
+:root {
+    -DeepthFlavour: #150223;
+    -MorningFlavour: #B699CB;
+    -MidSeason: #300E4B;
+    -FreshAir: #7D579A;
+}
+
+.createjob-button {
+    width: 208px;
+    height: 78px;
+    border-radius: 16px;
+    background-color: #7D579A;
+}
+
