@@ -5,25 +5,43 @@ import { useState } from 'react'
 import './App.css'
 
 //* Importing components
-import TodoItem from '../Components/TodoItem/';
-import CreateJobButton from '../Components/CreateJobButton';
+import { JobListItem } from '../Components/JobListItem';
+import { CreateJobButton } from '../Components/CreateJobButton';
 import { JobCounter } from '../Components/JobCounter/JobCounter';
+import { MyJobSearch } from '../Components/MyJobSearch';
+import { JobItem } from '../Components/JobItem/';
 
+//* Importing utils
+import defaultJobs from '../Utils/DefaultJobs';
+ 
+//* App :3
 function App() {
-  const [count, setCount] = useState(0)
+  //* Creating the estate for search component
+  // const [searchValue, setSearchValue] = useState('');
 
   return (
     <>
-      <div>
+      <div className='app-mainContainer'>
         <h2>My App :3</h2>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
+        <MyJobSearch 
+          // searchValue={searchValue}
+          // setSearchValue={setSearchValue}
+        />
+        <JobCounter completedJobs = { 16 }  totalJobs = { 8 } />
+        <JobListItem>
+          { defaultJobs.map(currentJob => (
+          <JobItem 
+            key={currentJob.job}
+            jobDescription={currentJob.job}
+            jobStatus={currentJob.finished}
+            jobType={currentJob.type} />
+          ))}
+        </JobListItem>
+        <div className='mainContainer-createButton-box'>
+          <CreateJobButton>
+            Let´s do something awesome :3
+          </CreateJobButton>
         </div>
-        <JobCounter />
-
-        <CreateJobButton>Let´s do something awesome :3</CreateJobButton>
       </div>
     </>
   )

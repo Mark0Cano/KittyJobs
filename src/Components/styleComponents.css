@@ -3,12 +3,122 @@
     -MorningFlavour: #B699CB;
     -MidSeason: #300E4B;
     -FreshAir: #7D579A;
+    font-family: "Comfortaa", sans-serif;
 }
+
+
+/* Style for Search input and button */
+.myJobSearch-Container {
+    width: 80%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #300E4B;
+    border-radius: 6px;
+}
+
+.myJobSearch-Container-input {
+    padding-left: 16px;
+    border-radius: 6px;
+    border: none;
+    color: #8BC6EC;
+    background-color: #300E4B;
+    
+}
+
+.myJobSearch-Container-input:focus {
+    outline: #9290C3 1px;
+
+}
+
+.myJobSearch-Container-button {
+    background-color: #300E4B;
+    border: none;
+    border-radius: 6px;
+}
+
+.myJobSearch-Container-button:hover {
+    cursor: pointer;
+}
+
+
+
+/* Style for Job Cunter */
+.jobCounter-container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.jobCounter-container div {
+    padding-right: 16px;
+}
+
+
+
+/* Style for Job Item List */
+.jobListItem {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    padding: 0;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+}
+
+.jobItem-li{
+    display: flex;
+    width: 220px;
+    height: 48px;
+    margin: 8px;
+    padding: 4px 8px 4px 8px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    font-family: Roboto;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: small;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
+}
+
+.finishedStatusText {
+    color: #525252;
+    text-decoration: line-through;
+}
+
+.finishedStatusIcon {
+    color: #3f3f3f;
+}
+
+
+/* Create Job button */
+.mainContainer-createButton-box {
+    width: 100%;
+    height: 42px;
+    bottom: -2px;
+    position: fixed;
+    background-color: #535C91;
+}   
 
 .createjob-button {
-    width: 208px;
-    height: 78px;
-    border-radius: 16px;
-    background-color: #7D579A;
+    width: 124px;
+    height: 64px;
+    margin: auto;
+    position: absolute;
+    top: -18px;
+    border-radius: 6px;
+    background-color: #1d1d1d;
+    border: none;
+    color: #00FD97;
 }
 
+.jobCounter-container {
+    margin-top: 16px;
+}

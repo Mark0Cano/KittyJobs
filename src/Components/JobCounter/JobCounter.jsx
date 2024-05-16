@@ -3,10 +3,17 @@
 //* Importing Css
 
 //* Component
-const JobCounter = () => {
+const JobCounter = ({ totalJobs, completedJobs }) => {
     return (
-        <div>
-            This is mi Job Counter :v
+        <div className="jobCounter-container">
+            <div>
+                { completedJobs }
+                
+            </div>
+            <div>
+           
+                { totalJobs }
+            </div>
         </div>
     )
 }

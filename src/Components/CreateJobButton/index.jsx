@@ -11,4 +11,4 @@ const CreateJobButton = ({ children }) => {
     )
 };
 
-export default CreateJobButton;
+export { CreateJobButton };
