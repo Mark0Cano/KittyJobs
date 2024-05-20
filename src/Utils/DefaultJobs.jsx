@@ -9,7 +9,7 @@ const defaultJobs = [
     {
         job: 'Upadate Repository',
         type: 'Proyects',
-        finished: true,
+        finished: false,
     },
     {
         job: 'Run 20km',
@@ -24,6 +24,11 @@ const defaultJobs = [
     {
         job: 'Buying watercolor',
         type: 'Hobies',
+        finished: false,
+    },
+    {
+        job: 'Painting father portrait',
+        type: 'ArtSkils',
         finished: false,
     }
 ]

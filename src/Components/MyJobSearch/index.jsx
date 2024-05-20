@@ -19,7 +19,7 @@ const MyJobSearch = (
     // }
 ) => {
     //* Calling the context
-    const context = useContext(MyJobAppContext);
+    const myContext = useContext(MyJobAppContext);
 
     return (
         <div className="myJobSearch-Container">
@@ -27,11 +27,11 @@ const MyJobSearch = (
                 className='myJobSearch-Container-input' 
                 type="text" name="searching" 
                 placeholder="Olvidas algo?"
-                value={context.searchValue}
+                value={myContext.searchValue}
 
          /*------ Logic */
                 onChange={(event) => {
-                    context.setSearchValue(event.target.value);
+                    myContext.setSearchValue(event.target.value);
                     }}
             />
 

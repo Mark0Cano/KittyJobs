@@ -1,18 +1,28 @@
 //* Importing React
+import { useContext } from 'react';
+
+//* Importing App Context 
+import { MyJobAppContext } from '../../Utils/Context';
+
+//* Importing utils
+import defaultJobs from '../../Utils/DefaultJobs';
 
 //* Importing Css
 
 //* Component
-const JobCounter = ({ totalJobs, completedJobs }) => {
+const JobCounter = () => {
+    const context = useContext(MyJobAppContext);
+
+    const totalJobs = defaultJobs.length;
+    const doneJobs = (context.jobs.filter(job => !!job.finished).length);
+
     return (
         <div className="jobCounter-container">
             <div>
-                { completedJobs }
-                
+                { totalJobs } 
             </div>
             <div>
-           
-                { totalJobs }
+                { doneJobs }
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 // Importing React
-import { useState } from 'react'
+import { createContext, useState, useContext } from 'react'
 
 // Importing Pages
 import './App.css'
@@ -9,10 +9,14 @@ import { JobListItem } from '../Components/JobListItem';
 import { CreateJobButton } from '../Components/CreateJobButton';
 import { JobCounter } from '../Components/JobCounter/JobCounter';
 import { MyJobSearch } from '../Components/MyJobSearch';
-import { JobItem } from '../Components/JobItem/';
+// import { JobItem } from '../Components/JobItem/';
+
+//* Importing Context
+// import { MyJobAppContext } from '../Utils/Context/index.jsx'
+import { MyJobAppProvider } from '../Utils/Context/index.jsx'
 
 //* Importing utils
-import defaultJobs from '../Utils/DefaultJobs';
+// import defaultJobs from '../Utils/DefaultJobs';
  
 //* App :3
 function App() {
@@ -21,28 +25,25 @@ function App() {
 
   return (
     <>
-      <div className='app-mainContainer'>
-        <h2>My App :3</h2>
-        <MyJobSearch 
-          // searchValue={searchValue}
-          // setSearchValue={setSearchValue}
-        />
-        <JobCounter completedJobs = { 16 }  totalJobs = { 8 } />
-        <JobListItem>
-          { defaultJobs.map(currentJob => (
-          <JobItem 
-            key={currentJob.job}
-            jobDescription={currentJob.job}
-            jobStatus={currentJob.finished}
-            jobType={currentJob.type} />
-          ))}
-        </JobListItem>
-        <div className='mainContainer-createButton-box'>
-          <CreateJobButton>
-            Let´s do something awesome :3
-          </CreateJobButton>
+      <MyJobAppProvider>
+        <div className='app-mainContainer'>
+          <h2>My App :3</h2>
+          <MyJobSearch 
+          
+          />
+          <JobCounter />
+          <JobListItem 
+            
+          />
+            
+          
+          <div className='mainContainer-createButton-box'>
+            <CreateJobButton>
+              Let´s do something awesome :3
+            </CreateJobButton>
+          </div>
         </div>
-      </div>
+        </MyJobAppProvider>
     </>
   )
 }
