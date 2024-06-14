@@ -9,14 +9,10 @@ import { JobListItem } from '../Components/JobListItem';
 import { CreateJobButton } from '../Components/CreateJobButton';
 import { JobCounter } from '../Components/JobCounter/JobCounter';
 import { MyJobSearch } from '../Components/MyJobSearch';
-// import { JobItem } from '../Components/JobItem/';
 
-//* Importing Context
 // import { MyJobAppContext } from '../Utils/Context/index.jsx'
 import { MyJobAppProvider } from '../Utils/Context/index.jsx'
 
-//* Importing utils
-// import defaultJobs from '../Utils/DefaultJobs';
  
 //* App :3
 function App() {

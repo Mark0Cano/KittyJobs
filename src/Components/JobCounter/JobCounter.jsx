@@ -13,7 +13,7 @@ import defaultJobs from '../../Utils/DefaultJobs';
 const JobCounter = () => {
     const context = useContext(MyJobAppContext);
 
-    const totalJobs = defaultJobs.length;
+    const totalJobs = context.jobs.length;
     const doneJobs = (context.jobs.filter(job => !!job.finished).length);
 
     return (

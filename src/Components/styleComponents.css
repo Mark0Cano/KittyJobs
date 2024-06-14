@@ -41,6 +41,13 @@
     cursor: pointer;
 }
 
+@media (min-width: 680px) {
+    .myJobSearch-Container {
+      width: 38%;
+  
+    }
+  }
+
 
 
 /* Style for Job Cunter */
@@ -77,7 +84,7 @@
     padding: 4px 8px 4px 8px;
     align-items: center;
     justify-content: space-between;
-    border-radius: 16px;
+    border-radius: 8px;
     font-family: Roboto;
     line-height: 1.5;
     font-weight: 300;
@@ -88,13 +95,21 @@
     box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.45);
 }
 
+.normalIcon {
+    color: #525252;
+}
+
+.normalIconDelete:hover {
+    color: #850707;
+}
+
 .finishedStatusText {
     color: #525252;
     text-decoration: line-through;
 }
 
 .finishedStatusIcon {
-    color: #3f3f3f;
+    color: #003170;
 }
 
 

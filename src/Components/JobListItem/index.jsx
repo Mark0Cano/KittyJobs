@@ -22,21 +22,32 @@ const JobListItem = ({ children }) => {
     
     })
 
-    //* Creating our Encapsulated Function :D
+    //* Creating our Encapsulated Function :D  to mark as done a job
     const finishedJobs = (text) => {
         //* Creating a copy from the original Jobs Array
         const finishedJobsArray = [...myContext.jobs];
-
         //* This is a funtion to locate the current index from a Job Item
         const jobIndex = finishedJobsArray.findIndex(
             (job) => job.job == text
         );
-
         //* This Function will set a JobFinished as True :v
         finishedJobsArray[jobIndex].finished = true;
-
         myContext.setJobs(finishedJobsArray)
     }
+
+    //* Creating our Encapsulated Function :D  to delete a job
+    const deleteJob = (text) => {
+        //* Creating a copy from the original Jobs Array
+        const deletedJobArray = [...myContext.jobs];
+        //* This is a funtion to locate the current index from a Job Item
+        const jobIndex = deletedJobArray.findIndex(
+            (job) => job.job == text
+        );
+        //* Separanting job by Splice method
+        deletedJobArray.splice(jobIndex, 1);
+        myContext.setJobs(deletedJobArray);
+        }
+
     return (
         <ul className="jobListItem">
             { findingJobs.map(currentJob => (
@@ -51,6 +62,12 @@ const JobListItem = ({ children }) => {
                     //* We create a encapsulate a funtion to prevent 
                     //* the auto execution from react, because we need the currentJob.job ass a parameter
                     () => finishedJobs(currentJob.job)
+                } 
+                // Simulating a event to encapsulate a function inside it :3 and its send as a prop
+                onDelete={
+                    //* We create a encapsulate a funtion to prevent 
+                    //* the auto execution from react, because we need the currentJob.job ass a parameter
+                    () => deleteJob(currentJob.job)
                 }    
             />
                 )
